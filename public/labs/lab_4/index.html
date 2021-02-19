@@ -12,22 +12,22 @@
             <ul class = 'flex-outer'>
                 <li>
                     <label for = 'fname'>First Name</label>
-                    <input type = 'text' id = 'fname' placeholder = 
+                    <input type = 'text' id = 'fname' name = 'fname' placeholder = 
                         'Enter your first name here'>
                 </li>
                 <li>
                     <label for = 'lname'>Last Name</label>
-                    <input type = 'text' id = 'lname' placeholder = 
+                    <input type = 'text' id = 'lname' name = 'lname' placeholder = 
                         'Enter your last name here'>
                 </li>
                 <li>
                     <label for = 'email'>Email</label>
-                    <input type = 'email' id = 'email' placeholder = 
+                    <input type = 'email' id = 'email' name = 'email' placeholder = 
                         'Enter your email here'>
                 </li>
                 <li>
                     <label for = 'phone'>Phone</label>
-                    <input type = "tel" id = "phone" placeholder = 
+                    <input type = "tel" id = "phone" name = 'phone' placeholder = 
                         'Enter your phone here'>
                 </li>
                 <li>
@@ -39,33 +39,18 @@
                     <p>Age</p>
                     <ul class = 'flex-inner'>
                         <li>
-                            <input type = 'checkbox' id = 'twenty-to-twentynine'>
-                            <label for = 'twenty-to-twentynine'>20-29</label>
+                            <input type = 'checkbox' id = 'eightteen-to-twentyfive'>
+                            <label for = 'eightteen-to-twentyfive'>18-25</label>
                         </li>
                         <li>
-                            <input type = 'checkbox' id = 'thirty-to-thirtynine'>
-                            <label for = 'thirty-to-thirtynine'>30-39</label>
+                            <input type = 'checkbox' id = 'thirtyfive-to-fifty'>
+                            <label for = 'thirtyfive-to-fifty'>35-50</label>
                         </li>
                         <li>
-                            <input type = 'checkbox' id = 'forty-to-fortynine'>
-                            <label for = 'forty-to-fortynine'>40-49</label>
+                            <input type = 'checkbox' id = 'fifty-to-sixtyfive'>
+                            <label for = 'fifty-to-sixtyfive'>50-65</label>
                         </li>
-                        <li>
-                            <input type = 'checkbox' id = 'fifty-to-fiftynine'>
-                            <label for = 'fifty-to-fiftynine'>50-59</label>
-                        </li>
-                        <li>
-                            <input type = 'checkbox' id = 'sixty-to-sixtynine'>
-                            <label for = 'sixty-to-sixtynine'>60-69</label>
-                        </li>
-                        <li>
-                            <input type = 'checkbox' id = 'seventy-to-seventynine'>
-                            <label for = 'seventy-to-seventynine'>70-79</label>
-                        </li>
-                        <li>
-                            <input type = 'checkbox' id = 'other'>
-                            <label for = 'other'>Other</label>
-                        </li>
+                        
                     </ul>
                 </li>
                 <li>
@@ -75,13 +60,13 @@
         </form>
         </div>
         <script>
-            let express = require('express')
-            let app = express()
+            let express = require('express');
+            let app = express();
 
-            app.get('/', function(req, res) {
-                res.send('hello world')
-            })
-            app.listen(3000)
+            app.get('http://localhost:3000/labs/lab_4/', function (req, res) {
+                res.send('hello world');
+            });
+            app.listen(3000);
         </script>
 
     </body>
