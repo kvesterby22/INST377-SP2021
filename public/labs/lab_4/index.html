@@ -75,8 +75,15 @@
                 console.log('Form data in res.body', req.body)
                 console.log('Now send something back to your client')
                 res.json('Hello World'); 
-                res.json({data: dataToSendToFrontEnd})
             }) 
+            app.listen(port, async () => {
+                console.log(`Example app listening on port ${port}`)
+            })
+            liveReloadServer.server.once('connection', () => {
+                setTimeout( () => {
+                    liveReloadServer.refresh('/')
+                }, 100)
+            })
         </script>
 
     </body>
