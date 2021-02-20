@@ -6,8 +6,8 @@
         <title>Kaitlyn Vesterby Lab 4</title>
     </head>
     <body>
-        <div class = 'container'>
-        <form action = '/api' method = 'post'>
+        <div class = 'container' >
+        <form action = '/api' method = 'post' >
             <h1>Kaitlyn Vesterby's Lab 4</h1>
             <ul class = 'flex-outer'>
                 <li>
@@ -32,7 +32,7 @@
                 </li>
                 <li>
                     <label for = 'message'>Message</label>
-                    <textarea rows = '5' cols = '33' name = 'message' placeholder = 
+                    <textarea rows = '5' cols = '33' id = 'message' name = 'message' placeholder = 
                         'Enter your message here'></textarea>
                 </li>
                 <li>
@@ -54,37 +54,40 @@
                     </ul>
                 </li>
                 <li>
-                    <button type = 'submit' name = 'button' formmethod = 'post'>Submit</button>
+                    <button type = 'submit' id = 'button' name = 'button' formmethod = 'post'>Submit</button>
                     <label for = 'button'></label>
                 </li>
             </ul>
+            
+            
         </form>
-        </div>
         <script>
             app.route('/api') 
-            .get(async(req, res) => { 
-                console.log('GET request detected')
-            res.send('GET request called'); 
-            const data = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json')
-            const json = await data.json();
-            console.log('data from fetch', json)
-            res.json(json)
-            }) 
-            .post(async(req, res) => { 
-                console.log('POST request detected')
-                console.log('Form data in res.body', req.body)
-                console.log('Now send something back to your client')
-                res.json('Hello World'); 
-            }) 
-            app.listen(port, async () => {
-                console.log(`Example app listening on port ${port}`)
-            })
-            liveReloadServer.server.once('connection', () => {
-                setTimeout( () => {
-                    liveReloadServer.refresh('/')
-                }, 100)
-            })
+        .get(async(req, res) => { 
+            console.log('GET request detected')
+        res.send('GET request called'); 
+        const data = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json')
+        const json = await data.json();
+        console.log('data from fetch', json)
+        res.json(json)
+        }) 
+        .post(async(req, res) => { 
+            console.log('POST request detected')
+            console.log('Form data in res.body', req.body)
+            console.log('Now send something back to your client')
+            res.json('Hello World'); 
+        }) 
+        app.listen(port, async () => {
+            console.log(`Example app listening on port ${port}`)
+        })
+        liveReloadServer.server.once('connection', () => {
+            setTimeout( () => {
+                liveReloadServer.refresh('/')
+            }, 100)
+        })
         </script>
+        
+        </div>
 
     </body>
 </html>
