@@ -61,14 +61,22 @@
         </form>
         </div>
         <script>
-            let express = require('express');
-            let app = express();
-            let port = 3000;
-
-            app.get('http://localhost:3000/labs/lab_4/', function (req, res) {
-                res.send('hello world');
-            });
-            app.listen(port);
+            app.route('/api') 
+            .get(async(req, res) => { 
+                console.log('GET request detected')
+            res.send('GET request called'); 
+            const data = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json')
+            const json = await data.json();
+            console.log('data from fetch', json)
+            res.json(json)
+            }) 
+            .post(async(req, res) => { 
+                console.log('POST request detected')
+                console.log('Form data in res.body', req.body)
+                console.log('Now send something back to your client')
+                res.json('Hello World'); 
+                res.json({data: dataToSendToFrontEnd})
+            }) 
         </script>
 
     </body>
