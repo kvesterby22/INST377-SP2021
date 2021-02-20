@@ -7,7 +7,7 @@
     </head>
     <body>
         <div class = 'container' >
-        <form action = '/api' method = 'post' >
+        <form action = '/api' method = 'post' name = 'main-form' id = 'main-form'>
             <h1>Kaitlyn Vesterby's Lab 4</h1>
             <ul class = 'flex-outer'>
                 <li>
@@ -54,38 +54,12 @@
                     </ul>
                 </li>
                 <li>
-                    <button type = 'submit' id = 'button' name = 'button' formmethod = 'post'>Submit</button>
+                    <button type = 'submit' id = 'button' name = 'button'>Submit</button>
                     <label for = 'button'></label>
                 </li>
             </ul>
-            
-            
+               
         </form>
-        <script>
-            app.route('/api') 
-        .get(async(req, res) => { 
-            console.log('GET request detected')
-        res.send('GET request called'); 
-        const data = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json')
-        const json = await data.json();
-        console.log('data from fetch', json)
-        res.json(json)
-        }) 
-        .post(async(req, res) => { 
-            console.log('POST request detected')
-            console.log('Form data in res.body', req.body)
-            console.log('Now send something back to your client')
-            res.json('Hello World'); 
-        }) 
-        app.listen(port, async () => {
-            console.log(`Example app listening on port ${port}`)
-        })
-        liveReloadServer.server.once('connection', () => {
-            setTimeout( () => {
-                liveReloadServer.refresh('/')
-            }, 100)
-        })
-        </script>
         
         </div>
 
