@@ -122,24 +122,9 @@ describe('Lab 4', () => {
     cy.get('form').should('have.attr', 'method', 'post');
     cy.get('form').should('have.attr', 'action', '/api');
     cy.get('button[type=submit]')
-<<<<<<< HEAD
-      .click();
-    cy.contains('hello world', { matchCase: false });
-  });
-
-  it('Should receive a string containing "Hello World" from the server - use res.send from Express docs for this', () => {
-    cy.fixture('test_values').then((json) => {
-      const labUrl = `${json.test_context || ''}labs/lab_4/`;
-      cy.visit(labUrl);
-      cy.get('button[type=submit]')
-        .click();
-      cy.contains('hello world', { matchCase: false });
-    });
-=======
       .click()
       .then(() => {
         cy.contains('hello world', { matchCase: false });
       });
->>>>>>> 71de18f657cb88e0e18449b2b53406b61eada9c4
   });
 });
