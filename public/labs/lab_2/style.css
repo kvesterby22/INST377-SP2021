@@ -81,20 +81,20 @@ h1 {
   padding-top: 20.15px;
 }
 
-.nav {
+nav {
   height: 50px;
   flex: 100%;
   display: flex;
 }
 
-.nav ul {
+nav ul {
   padding: 0;
   list-style-type: none;
   flex: 2;
   display: flex;
 }
 
-.nav li {
+nav li {
   display: inline;
   text-align: center;
   flex: 1;
