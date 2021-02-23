@@ -62,6 +62,9 @@ liveReloadServer.server.once('connection', () => {
   }, 100);
 });
 
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url)
+const { Sequelize } = require('sequelize');
 const ormSql = new Sequelize({
   username: 'student',
   password: 'INST377@UMD',
@@ -69,6 +72,6 @@ const ormSql = new Sequelize({
   database: 'maui_hotels',
   dialect: 'mysql',
   ssl: 'Amazon RDS',
-  pool: {maxConnection: 5, maxIdleTime: 30},
+  pool: {maxConnections: 5, maxIdleTime: 30},
   language: 'en'
-})
+});
