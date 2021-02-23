@@ -61,3 +61,14 @@ liveReloadServer.server.once('connection', () => {
     liveReloadServer.refresh('/');
   }, 100);
 });
+
+const ormSql = new Sequelize({
+  username: 'student',
+  password: 'INST377@UMD',
+  host: '3.236.243.212',
+  database: 'maui_hotels',
+  dialect: 'mysql',
+  ssl: 'Amazon RDS',
+  pool: {maxConnection: 5, maxIdleTime: 30},
+  language: 'en'
+})
