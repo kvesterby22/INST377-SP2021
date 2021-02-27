@@ -1,0 +1,32 @@
+{
+  "development": {
+    "username": "student",
+    "password": "INST377@UMD",
+    "database": "maui_hotels",
+    "host": "3.236.243.212",
+    "dialect": "mysql",
+    "ssl": "Amazon RDS",
+    "pool": {"maxConnections": 5, "maxIdleTime": 30},
+    "language": "en"
+  },
+  "test": {
+    "username": "student",
+    "password": "INST377@UMD",
+    "database": "maui_hotels",
+    "host": "3.236.243.212",
+    "dialect": "mysql",
+    "ssl": "Amazon RDS",
+    "pool": {"maxConnections": 5, "maxIdleTime": 30},
+    "language": "en"
+  },
+  "production": {
+    "username": "student",
+    "password": "INST377@UMD",
+    "database": "maui_hotels",
+    "host": "3.236.243.212",
+    "dialect": "mysql",
+    "ssl": "Amazon RDS",
+    "pool": {"maxConnections": 5, "maxIdleTime": 30},
+    "language": "en"
+  }
+}

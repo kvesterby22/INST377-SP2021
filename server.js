@@ -62,9 +62,9 @@ liveReloadServer.server.once('connection', () => {
   }, 100);
 });
 
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url)
-const { Sequelize } = require('sequelize');
+import {
+  Sequelize
+} from "sequelize";
 const ormSql = new Sequelize({
   username: 'student',
   password: 'INST377@UMD',
@@ -75,3 +75,11 @@ const ormSql = new Sequelize({
   pool: {maxConnections: 5, maxIdleTime: 30},
   language: 'en'
 });
+ormSql
+  .authenticate()
+  .then(() => {
+    console.log('Connection has been established successfully.');
+  })
+  .catch(err => {
+    console.error('Unable to connect to the database:', err);
+  });
