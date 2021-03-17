@@ -1,13 +1,50 @@
-<!--
-    - set this up as an HTML page with correct wrapper and container
-    - this is to make sure your chart isn't Huge when it appears
-    - Import your stylesheet in the head
-    - Import your bar chart from https://canvasjs.com/html5-javascript-bar-chart/
-    - Import script.js before your body closing tag
-    - add a div with an id of chartContainer
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kaitlyn's Lab 5</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
+  </head>
 
-    - TRY THIS: type "doc" at the top of this file and press "tab" for Emmet autocomplete support
--->
+  <body>
+    <section class="section">
+      <div class="container columns is-max-widescreen">
+          <div class = 'column info'>
+            <h1 class="title">Kaitlyn's Lab 5</h1>
+            <div class = 'subtitle'>ZipCode Food Search</div>
+            <div class = 'block'>
+                <form id="search-form" action = "" class = 'block form'>
+                <label for ='category'></label>
+                <input type='text' name='category' class='search' id = 'search' placeholder = 'type in a zipcode'>
+            
+                <ul class = 'suggestions'>
 
+                </ul>
+                </form>
+                <div class = 'reply-box block'>
+                    <div class = 'reply-message'></div>
+                        <ul class ='target-list'>
+                        </ul>
+                </div>
+            </div>
+        </div>
+        <div class = 'column'>
+            <div class = 'box' id = 'mapid'>I am a map</div>
+        </div>
+        </div>
+    </section>
+    
+  </body>
+  <script src=script.js></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
 
+</html>
