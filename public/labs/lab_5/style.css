@@ -1,2 +1,25 @@
 #mapid { height: 600px;
     width: 400px; }
+.section {
+    background-color: lightgrey;
+}
+.list-item {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 1.5rem;
+    
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgb(243, 235, 235) 0%, rgb(163, 219, 245) 35%, rgb(109, 192, 240) 100%);
+    flex: stretch;
+}
+button {
+    align-self: flex-start;
+}
+#search {
+    flex: stretch;
+    margin-bottom: 1.5rem;
+}
+.title {
+    color: black;
+}

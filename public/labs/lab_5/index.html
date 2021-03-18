@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang = 'en'>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv = 'X-UA-Compatible' content = 'IE=edge'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kaitlyn's Lab 5</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
         crossorigin=""/>
@@ -20,7 +20,7 @@
   <body>
     
     <section class="section">
-      <div class="container columns is-max-widescreen">
+      <div class="columns">
           <div class = 'column info'>
             <h1 class="title">Kaitlyn Vesterby's Lab 5</h1>
             <div class = 'subtitle'>ZipCode Food Search</div>
@@ -28,27 +28,27 @@
                 <form id="search-form" action = "" class = 'block form'>
                 <label for='search-form'></label>
                 <input type='text' name='search' id='search' placeholder='type in a zipcode'>
-            
-                </form>
-                <div class = 'reply-box block'>
-                    <div class = 'reply-message'></div>
-                        <ul class='target-list'>
-                            
-                        </ul>
-                </div>
+                <label for='search'></label>
+                    <!-- <ul>
+                        <li>
+                            <button type='submit' class='submit' id='submit' name='submit'>Submit</button>
+                            <label for = 'submit'></label>
+                        </li>
+                    </ul> -->
+                <ul class='target-list'>
+                        
+                </ul>
+            </form>
             </div>
         </div>
         <div class = 'column'>
             <div class = 'box' id = 'mapid'>
             </div>
         </div>
+        
         </div>
-        <ul>
-            <li>
-                <button type='submit' class='submit' name='submit'>Submit</button>
-                <label for = 'submit'></label>
-            </li>
-        </ul>
+        
+        
     </section>
     <script src='script.js'></script>
   </body>
