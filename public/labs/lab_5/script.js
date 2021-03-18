@@ -70,7 +70,7 @@ async function dataHandler(mapObjectFromFunction) {
       const appendItem = document.createElement('li');
       appendItem.classList.add('block');
       appendItem.classList.add('list-item');
-      appendItem.innerHTML = `<div class="list-header is-size-5">${item.name}</div><address class="is-size-6">${item.address_line_1}</address>`;
+      appendItem.innerHTML = `<div class="list-header is-size-5">${item.name}</div><address class="is-size-6">${item.address_line_1}</address><address class="is-size-6">${item.zip}</address>`;
       targetList.append(appendItem);
     });
   });
