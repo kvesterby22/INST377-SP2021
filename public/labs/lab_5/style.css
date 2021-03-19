@@ -13,8 +13,9 @@
     background: linear-gradient(90deg, rgb(243, 235, 235) 0%, rgb(163, 219, 245) 35%, rgb(109, 192, 240) 100%);
     flex: stretch;
 }
-button {
-    align-self: flex-start;
+.formbutton {
+    flex-direction: column;
+    justify-content: flex-end;
 }
 #search {
     flex: stretch;
